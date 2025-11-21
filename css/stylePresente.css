@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #e6e6fa;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+/* Container geral centraliza todo o conteúdo */
+.container-geral {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+  padding: 40px 20px 10px;
+}
+
+.icon {
+  width: 120px;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6em;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* Barra superior */
+.top-bar {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 5px;
+}
+
+/* Botão do carrinho */
+.cart {
+  background-color: #a794d6; /* Lilás suave */
+  border: none;
+  border-radius: 50px;
+  padding: 12px 26px;
+  font-size: 15px;
+  color: #f9f6f9;
+  cursor: pointer;
+}
+
+/* Ordenação */
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Cards dos presentes */
+.container {
+  display: flex;
+  gap: 50px; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;  
+  max-width: 1200px;
+}
+
+.gift-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: 0;
+  width: 100%;
+  max-width: 280px;
+  background: #fffeff; /* Lilás muito suave (base da carta) */
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.gift-image {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+.gift-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #495057;
+  margin: 10px 0 5px;
+}
+
+.gift-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2b2b2b;
+  margin: 6px 0 12px;
+}
+
+.gift-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  background-color: #a794d6; /* Lilás principal */
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gift-button:hover {
+  background-color: #aa5edc;
+}
+
+/* Carrinho */
+.hidden {
+  display: none;
+}
+
+.cart-section {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+.cart-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.cart-table th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  color: #444;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.cart-item img {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.cart-item-title {
+  flex: 1;
+  font-weight: 600;
+}
+
+.remove {
+  color: #c067ccb9;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+.cart-buttons {
+  display: flex;
+  flex-direction: column; /* Botões empilhados no carrinho */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-gray,
+.btn-pink {
+  border: none;
+  border-radius: 50px;
+  padding: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-gray {
+  background: #6c757d;
+  color: #fff;
+}
+
+/* --- AJUSTES DE CORES GERAIS (Lilás/Lavanda) --- */
+
+/* Cor principal (Lilás/Roxo) */
+.btn-pink,
+#irParaPagamento { /* Botão de pagamento e outros botões principais */
+  background: #a794d6; 
+  color: #fff;
+}
+
+.btn-pink:hover,
+#irParaPagamento:hover {
+  background: #aa5edc; /* Lilás um pouco mais escuro no hover */
+}
+
+/* Botão cinza (voltar/adicionar mais) */
+.btn-gray,
+#voltarCarrinho {
+  background: #6c757d; /* Cinza */
+  color: #fff;
+}
+
+.btn-gray:hover,
+#voltarCarrinho:hover {
+  background: #5a6268;
+}
+
+/* --- ESTILO PARA A TELA DE RESUMO DA COMPRA (CORRIGIDO) --- */
+
+#resumoSection {
+  /* 1. Largura estreita (como o carrinho) */
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff; 
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+  text-align: left;
+}
+
+/* 3. Fonte bonita para o título do Resumo */
+#resumoSection h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em; 
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.resumo-box {
+  border: 1px solid #ead3e8; /* Borda levemente lilás */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 1em;
+}
+
+.linha span:last-child {
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+.linha.total {
+  border-top: 1px dashed #a794d6; /* Linha tracejada lilás */
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #a794d6; /* Total final em lilás */
+}
+
+/* 2. Botões empilhados (Volta a ser como o carrinho) */
+.botoes-resumo a {
+  display: flex;
+  flex-direction: column; /* Empilha os botões */
+  gap: 10px;
+  margin-top: 20px;
+  text-decoration: none; /* 🎯 REMOVE O SUBINHALDO */
+  font-family: sans-serif; /* 🎯 GARANTE A FONTE CORRETA */
+  text-align: center;
+}
+
+.botoes-resumo button {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1em;
+  border-radius: 50px; /* Volta ao arredondado */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  
+}

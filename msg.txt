@@ -1,0 +1,18 @@
+Olá, Martha e Odilon!
+ 
+{{nome}} acabou de confirmar a presença no seu casamento!
+Esses são os dados que {{nome}} preencheu:
+ 
+Quantidade de adultos: {{quantidade_adultos}}
+Nome do acompanhante: {{nomeAcompanhante}}
+Quantidade de crianças: {{quantidade_crianca}}
+Nome do acompanhante: {{nomeCriancas}}
+E-mail: {{email}}
+Telefone: {{telefone}}
+Observações: 
+
+
+ 
+{{time}}
+
+{{message}}
