@@ -1,49 +1,59 @@
-body {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* Scope all present styles under #presentes so they don't get overridden */
+/* Make the presents section span full width even inside .fundo (which centers children)
+   and keep its own background and typography. */
+#presentes {
+  display: block;
+  width: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
   background-color: #e6e6fa;
   color: #2b2b2b;
   text-align: center;
+  padding: 60px 0; /* vertical spacing so lavanda forms a full-width band */
 }
 
-/* Container geral centraliza todo o conteúdo */
-.container-geral {
+/* Container geral centraliza todo o conteúdo (escopado) */
+#presentes .container-geral {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Cabeçalho */
-.cabeçalho {
+/* Cabeçalho (escopado) */
+#presentes .cabeçalho {
   padding: 40px 20px 10px;
 }
 
-.icon {
+#presentes .icon {
   width: 120px;
   margin-bottom: 30px;
   opacity: 0.7;
 }
 
-.title {
-  font-family: 'Great Vibes', cursive;
+#presentes .title {
+  font-family: 'Hurricane', cursive;
   font-size: 2.6em;
   color: #333;
   letter-spacing: 2px;
 }
 
-/* Barra superior */
-.top-bar {
+/* Barra superior (escopada) */
+#presentes .top-bar {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   gap: 10px;
   margin: 5px;
 }
 
-/* Botão do carrinho */
-.cart {
+/* Botão do carrinho (escopado) */
+#presentes .cart {
   background-color: #a794d6; /* Lilás suave */
   border: none;
   border-radius: 50px;
@@ -53,39 +63,39 @@ body {
   cursor: pointer;
 }
 
-/* Ordenação */
-.sort {
+/* Ordenação (escopada) */
+#presentes .sort {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 14px;
 }
 
-select {
+#presentes select {
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 14px;
 }
 
-/* Cards dos presentes */
-.container {
+/* Cards dos presentes (escopados) */
+#presentes .container {
   display: flex;
-  gap: 50px; 
+  gap: 50px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;  
+  margin: 20px;
   max-width: 1200px;
 }
 
-.gift-container{
+#presentes .gift-container{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card {
+#presentes .card {
   margin: 0;
   width: 100%;
   max-width: 280px;
@@ -97,31 +107,31 @@ select {
   transition: transform 0.2s;
 }
 
-.card:hover {
+#presentes .card:hover {
   transform: translateY(-3px);
 }
 
-.gift-image {
+#presentes .gift-image {
   width: 100%;
   border-radius: 16px;
   margin-bottom: 10px;
 }
 
-.gift-title {
+#presentes .gift-title {
   font-size: 15px;
   font-weight: 600;
   color: #495057;
   margin: 10px 0 5px;
 }
 
-.gift-price {
+#presentes .gift-price {
   font-size: 18px;
   font-weight: bold;
   color: #2b2b2b;
   margin: 6px 0 12px;
 }
 
-.gift-button {
+#presentes .gift-button {
   width: 100%;
   padding: 12px;
   border: none;
@@ -134,16 +144,18 @@ select {
   transition: 0.3s;
 }
 
-.gift-button:hover {
+#presentes .gift-button:hover {
   background-color: #aa5edc;
 }
 
 /* Carrinho */
-.hidden {
+/* Scoped hidden for presents elements */
+#presentes .hidden {
   display: none;
 }
 
-.cart-section {
+/* Carrinho (escopado) */
+#presentes .cart-section {
   max-width: 400px;
   margin: 20px auto;
   background: #fff;
@@ -153,64 +165,64 @@ select {
   text-align: left;
 }
 
-.cart-section h2 {
+#presentes .cart-section h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #333;
 }
 
-.cart-table {
+#presentes .cart-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
 
-.cart-table th {
+#presentes .cart-table th {
   text-align: left;
   border-bottom: 1px solid #ddd;
   padding-bottom: 6px;
   color: #444;
 }
 
-.cart-item {
+#presentes .cart-item {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 10px 0;
 }
 
-.cart-item img {
+#presentes .cart-item img {
   width: 60px;
   border-radius: 8px;
 }
 
-.cart-item-title {
+#presentes .cart-item-title {
   flex: 1;
   font-weight: 600;
 }
 
-.remove {
+#presentes .remove {
   color: #c067ccb9;
   text-decoration: underline;
   cursor: pointer;
   font-size: 14px;
 }
 
-.cart-total {
+#presentes .cart-total {
   text-align: right;
   margin-top: 15px;
   font-size: 1.1em;
 }
 
-.cart-buttons {
+#presentes .cart-buttons {
   display: flex;
   flex-direction: column; /* Botões empilhados no carrinho */
   gap: 10px;
   margin-top: 20px;
 }
 
-.btn-gray,
-.btn-pink {
+#presentes .btn-gray,
+#presentes .btn-pink {
   border: none;
   border-radius: 50px;
   padding: 12px;
@@ -219,7 +231,7 @@ select {
   font-weight: 500;
 }
 
-.btn-gray {
+#presentes .btn-gray {
   background: #6c757d;
   color: #fff;
 }
@@ -227,59 +239,60 @@ select {
 /* --- AJUSTES DE CORES GERAIS (Lilás/Lavanda) --- */
 
 /* Cor principal (Lilás/Roxo) */
-.btn-pink,
-#irParaPagamento { /* Botão de pagamento e outros botões principais */
-  background: #a794d6; 
+#presentes .btn-pink,
+#presentes #irParaPagamento { /* Botão de pagamento e outros botões principais */
+  background: #a794d6;
   color: #fff;
 }
 
-.btn-pink:hover,
-#irParaPagamento:hover {
+#presentes .btn-pink:hover,
+#presentes #irParaPagamento:hover {
   background: #aa5edc; /* Lilás um pouco mais escuro no hover */
 }
 
 /* Botão cinza (voltar/adicionar mais) */
-.btn-gray,
-#voltarCarrinho {
+#presentes .btn-gray,
+#presentes #voltarCarrinho {
   background: #6c757d; /* Cinza */
   color: #fff;
 }
 
-.btn-gray:hover,
-#voltarCarrinho:hover {
+#presentes .btn-gray:hover,
+#presentes #voltarCarrinho:hover {
   background: #5a6268;
 }
 
 /* --- ESTILO PARA A TELA DE RESUMO DA COMPRA (CORRIGIDO) --- */
 
-#resumoSection {
+/* Resumo (escopado) */
+#presentes #resumoSection {
   /* 1. Largura estreita (como o carrinho) */
   max-width: 400px;
   margin: 20px auto;
-  background: #fff; 
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: left;
 }
 
 /* 3. Fonte bonita para o título do Resumo */
-#resumoSection h2 {
+#presentes #resumoSection h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 2em; 
+  font-size: 2em;
   margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
 
-.resumo-box {
+#presentes .resumo-box {
   border: 1px solid #ead3e8; /* Borda levemente lilás */
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.linha {
+#presentes .linha {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -287,12 +300,12 @@ select {
   font-size: 1em;
 }
 
-.linha span:last-child {
+#presentes .linha span:last-child {
   font-weight: bold;
   color: #2b2b2b;
 }
 
-.linha.total {
+#presentes .linha.total {
   border-top: 1px dashed #a794d6; /* Linha tracejada lilás */
   margin-top: 10px;
   padding-top: 10px;
@@ -302,7 +315,7 @@ select {
 }
 
 /* 2. Botões empilhados (Volta a ser como o carrinho) */
-.botoes-resumo a {
+#presentes .botoes-resumo a {
   display: flex;
   flex-direction: column; /* Empilha os botões */
   gap: 10px;
@@ -312,7 +325,7 @@ select {
   text-align: center;
 }
 
-.botoes-resumo button {
+#presentes .botoes-resumo button {
   width: 100%;
   padding: 12px 15px;
   font-size: 1em;
@@ -320,5 +333,4 @@ select {
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease;
-  
 }
