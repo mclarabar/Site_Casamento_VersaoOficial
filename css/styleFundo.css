@@ -422,7 +422,7 @@ button:hover {
 }
 
 .bloco {
-  background: #b199c9;
+  background: #a794d6;
   color: #fff;
   width: 120px;          
   height: 120px;         
@@ -571,7 +571,7 @@ button:hover {
 
 /* ===== Menu styles imported from styleMenu.css ===== */
 :root {
-    --cor-roxo-principal: #c2a3e634;
+    --cor-roxo-principal: #e6e6fa;
     --cor-roxo-escuro: #4a2598f5;
     --cor-branco: #ffffff;
     --cor-cinza-claro: #f8f8f8;

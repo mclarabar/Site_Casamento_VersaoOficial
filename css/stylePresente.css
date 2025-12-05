@@ -6,12 +6,13 @@
 /* Make the presents section span full width even inside .fundo (which centers children)
    and keep its own background and typography. */
 #presentes {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   align-self: stretch;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
-  background-color: #e6e6fa;
+  background-color: #ffffff;
   color: #2b2b2b;
   text-align: center;
   padding: 60px 0; /* vertical spacing so lavanda forms a full-width band */
@@ -36,7 +37,6 @@
 }
 
 #presentes .title {
-  font-family: 'Hurricane', cursive;
   font-size: 2.6em;
   color: #333;
   letter-spacing: 2px;

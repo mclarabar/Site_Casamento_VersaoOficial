@@ -3,19 +3,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f8f6fc;
+  background-color: #e6e6fa;
   padding: 40px 20px;
   width: 100%;
 }
 
 .fundo_presenca h1 {
-  font-family: "Poppins", sans-serif;
-  color: #4b2a84;
+  color: #070011;
   margin-bottom: 30px;
 }
-
-
-
 
 .confirmar_presenca {
   background-color: white;
@@ -25,7 +21,8 @@
   width: 50%;
   /* max-width: 450px; */
   text-align: left;
-  font-family: "Poppins", sans-serif;
+  /* MUDANÇA: Altere a fonte do formulário de "Poppins" para "Lato" */
+  font-family: "Lato", sans-serif;
 }
 
 .confirmar_presenca form {
