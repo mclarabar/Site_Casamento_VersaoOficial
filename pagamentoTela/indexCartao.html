@@ -10,56 +10,34 @@
     
     <div class="payment-container">
         <h2 class="payment-title">Método de pagamento</h2>
-
+    
         <div class="payment-options">
-            <div class="option"> 
+            <div class="option" id="card-option"> 
                 <span class="icon">💳</span>
                 <span class="label">Cartão</span>
             </div>
-            <div class="option">
-                <span class="icon">💵</span>
-                <span class="label">Dinheiro</span>
-            </div>
-            <div class="option">
+        
+            <div class="option" id="pix-option">
                 <span class="icon">$</span>
                 <span class="label">Pix</span>
             </div>
         </div>
-
-        <label for="card-name" class="input-label">Nome no cartão</label>
-        <input type="text" id="card-name" class="input-field" placeholder="Nome & Sobrenome">
-
-        <label for="card-number" class="input-label">Número do cartão</label>
-        <input type="text" id="card-number" class="input-field" placeholder="0000 0000 0000 0000">
-
-        <div class="input-group">
-            
-            <div class="input-col-expiry"> 
-                <label for="expiry-day" class="input-label">Expira em</label>
-                <div class="expiry-group-fields">
-                    
-                    <div class="select-wrapper expiry-field">
-                        <select id="expiry-day" class="select-field">
-                            <option value="" disabled selected>Dia</option>
-                        </select>
+        
+        <div id="card-form-fields">
+            <label for="link" class="input-label">Link para efetuar o pagamento</label>
+            <input type="text" id="card-name" class="input-field">
+    
+            <div class="input-group">
+                <div class="input-col-expiry"> 
                     </div>
-                    
-                    <div class="select-wrapper expiry-field">
-                        <select id="expiry-year" class="select-field">
-                            <option value="" disabled selected>Ano</option>
-                        </select>
+                <div class="input-col-cvv">
                     </div>
-                    
-                </div>
-            </div>
-            
-            <label for="cvv" class="input-label">CVV</label>
-            <input type="number" id="cvv" class="input-field" placeholder="0000">
-                    
-                </div>
             </div>
         </div>
-    </div>
+        </div>
+    <footer class="main-footer">
+        <p> Com amor, Marta e Odilon</p>
+    </footer>
     
     <script src="scriptCartao.js"></script>
 </body>

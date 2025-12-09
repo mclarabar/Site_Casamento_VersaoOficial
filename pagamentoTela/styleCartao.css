@@ -1,13 +1,14 @@
 /* Definições globais e de corpo para centralizar */
 body {
     font-family: sans-serif;
-    background-color: #f5f5f5; 
+    background-color: #f7ceedbd;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    padding-bottom: 70px;
 }
 
 /* Container principal da tela de pagamento */
@@ -147,7 +148,7 @@ body {
     right: 10px;
     transform: translateY(-50%);
     pointer-events: none;
-    color: #555;
+    color: #e2b3d7;
     font-size: 1.2rem;
 }
 /* Estilização da Label */
@@ -158,4 +159,54 @@ body {
     color: #333; /* Cor escura para leitura */
     font-weight: 600; /* Levemente em negrito */
 }
+/* --- RODAPÉ (FOOTER) --- */
 
+.main-footer {
+    background-color: #333; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ocupa toda a largura */
+    
+    /* Garante que o rodapé apareça após o conteúdo principal */
+    margin-top: 40px; 
+}
+
+/* --- RODAPÉ (FOOTER) CORRIGIDO --- */
+
+.main-footer {
+    background-color: #f7ceedbd; 
+    color: #512e4f; 
+    text-align: center;
+    padding: 15px 0; /* Um pouco menos de padding para não ser muito alto */
+    width: 100%; 
+    
+    /* 🔑 CORREÇÃO PRINCIPAL: Fixa o rodapé na parte inferior da tela */
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    
+    margin-top: 0; /* Remove a margem que não é mais necessária com fixed */
+}
+
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffd700; /* Cor de destaque ao passar o mouse */
+}
+
+.separator {
+    color: #777;
+    font-size: 0.9rem;
+}
+/* Oculta os campos do cartão por padrão */
+#card-form-fields {
+    display: none; 
+}
