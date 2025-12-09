@@ -12,219 +12,125 @@
     />
   </head>
   <body>
-<!-- ===== LISTA DE PRESENTES ===== -->
-<section id="presentes" class="secao-presentes">
-  
-  <!-- Cabeçalho e lista de presentes -->
-  <div id="presentesListagem" class="presentes-listagem">
-    <img src="imgs/folha.png" alt="Folha decorativa" class="icon" />
-    <h1 class="title">Lista de presentes</h1>
 
-    <div class="top-bar">
-      <button id="cartButton" class="cart">Carrinho vazio</button>
+    <!-- ===== LISTA DE PRESENTES ===== -->
+    <section id="presentes" class="secao-presentes">
+      
+      <!-- Cabeçalho e lista de presentes -->
+      <div id="presentesListagem" class="presentes-listagem">
+        <div class="cabecalho-presentes">
+          <img src="imgs/folha.png" alt="Folha decorativa" class="folha-roxa" />
+          <h1 class="sdn-titulo-pagina">Lista de presentes</h1>
+        </div>
 
-      <div class="sort">
-        <label for="ordenar">Ordenar lista por:</label>
-        <select id="ordenar">
-          <option value="az">A-Z</option>
-          <option value="preco">Menor Preço</option>
-        </select>
+        <div class="top-bar">
+          <button id="cartButton" class="cart">Carrinho vazio</button>
+
+          <div class="sort">
+            <label for="ordenar">Ordenar lista por:</label>
+            <select id="ordenar">
+              <option value="az">A-Z</option>
+              <option value="preco">Menor Preço</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gift-container">
+          <div class="container" id="giftContainer">
+            <div class="card" data-preco="1693.46">
+              <img
+                src="fotosPresentes/tv.jpeg"
+                alt="AOC Roku TV Smart TV LED 32""
+                class="gift-image"
+              />
+              <h3 class="gift-title">AOC Roku TV Smart TV LED 32"</h3>
+              <p class="gift-price">R$ 1.693,46</p>
+              <button class="gift-button">Presentear</button>
+            </div>
+
+            <div class="card" data-preco="249.66">
+              <img
+                src="fotosPresentes/aparelho-de-jantar-em-porcelana-12-pecas.jpg"
+                alt="Aparelho de jantar"
+                class="gift-image"
+              />
+              <h3 class="gift-title">Aparelho de jantar</h3>
+              <p class="gift-price">R$ 249,66</p>
+              <a href="carrinho.html">
+                <button class="gift-button">Presentear</button>
+              </a>
+            </div>
+
+            <!-- COLOQUE AQUI TODOS OS OUTROS CARDS DE PRESENTES -->
+            <!-- ... continue com o resto dos cards ... -->
+
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="gift-container">
-      <div class="container" id="giftContainer">
-        <div class="card" data-preco="1693.46">
-          <img
-            src="fotosPresentes/tv.jpeg"
-            alt="AOC Roku TV Smart TV LED 32""
-            class="gift-image"
-          />
-          <h3 class="gift-title">AOC Roku TV Smart TV LED 32"</h3>
-          <p class="gift-price">R$ 1.693,46</p>
-          <button class="gift-button">Presentear</button>
+      <!-- Carrinho -->
+      <section id="cartSection" class="cart-section hidden">
+        <div class="cabecalho-presentes">
+          <img src="imgs/folha.png" alt="Folha decorativa" class="folha-roxa" />
+          <h2 class="sdn-titulo-pagina">Meu carrinho</h2>
         </div>
-
-        <div class="card" data-preco="249.66">
-          <img
-            src="fotosPresentes/aparelho-de-jantar-em-porcelana-12-pecas.jpg"
-            alt="Aparelho de jantar"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Aparelho de jantar</h3>
-          <p class="gift-price">R$ 249,66</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="96.61">
-          <img
-            src="fotosPresentes/aparelho-para-cha-8-pecas.jpg"
-            alt="Aparelho de chá"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Aparelho de chá</h3>
-          <p class="gift-price">R$ 96,61</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="296.59">
-          <img
-            src="fotosPresentes/jantar-cha.jpg"
-            alt="Aparelho para Jantar e Chá Oxford Daily"
-            class="gift-image"
-          />
-          <h3 class="gift-title">
-            Aparelho para Jantar e Chá Oxford Daily
-          </h3>
-          <p class="gift-price">R$ 296,59</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="420.36">
-          <img
-            src="fotosPresentes/aspirador.jpg"
-            alt="Aspirador de Pó e Água Vertical Wap"
-            class="gift-image"
-          />
-          <h3 class="gift-title">
-            Aspirador de Pó e Água Vertical Wap
-          </h3>
-          <p class="gift-price">R$ 420,36</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="107.22">
-          <img
-            src="fotosPresentes/assadeira.jpg"
-            alt="Assadeira"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Assadeira</h3>
-          <p class="gift-price">R$ 107,22</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="215.32">
-          <img
-            src="fotosPresentes/batedeira.jpg"
-            alt="Batedeira Philco Paris com 4 Velocidades - Branca"
-            class="gift-image"
-          />
-          <h3 class="gift-title">
-            Batedeira Philco Paris com 4 Velocidades - Branca
-          </h3>
-          <p class="gift-price">R$ 215,32</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="548.93">
-          <img
-            src="fotosPresentes/batedeira2.jpg"
-            alt="Batedeira Planetária Britânia"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Batedeira Planetária Britânia</h3>
-          <p class="gift-price">R$ 548,93</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="134.06">
-          <img
-            src="fotosPresentes/batedeira3.jpg"
-            alt="Batedeira Preta"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Batedeira Preta</h3>
-          <p class="gift-price">R$ 134,06</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="141.55">
-          <img
-            src="fotosPresentes/cafeteira.jpg"
-            alt="Cafeteira"
-            class="gift-image"
-          />
-          <h3 class="gift-title">Cafeteira</h3>
-          <p class="gift-price">R$ 141,55</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <div class="card" data-preco="353.22">
-          <img
-            src="fotosPresentes/cafeteiraEletrica.jpg"
-            alt="Cafeteira Elétrica Oster Flavor Programável"
-            class="gift-image"
-          />
-          <h3 class="gift-title">
-            Cafeteira Elétrica Oster Flavor Programável
-          </h3>
-          <p class="gift-price">R$ 353,22</p>
-          <button class="gift-button">Presentear</button>
-        </div>
-
-        <!-- Continue com os outros cards... -->
         
-      </div>
-    </div>
-  </div>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Descrição do presente</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="cartItems"></tbody>
+        </table>
+        
+        <div class="cart-total">
+          <strong>Total:</strong> <span id="cartTotal">R$ 0,00</span>
+        </div>
 
-  <!-- Carrinho -->
-  <section id="cartSection" class="cart-section hidden">
-    <h2>Meu carrinho</h2>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Descrição do presente</th>
-          <th>Valor</th>
-        </tr>
-      </thead>
-      <tbody id="cartItems"></tbody>
-    </table>
-    <div class="cart-total">
-      <strong>Total:</strong> <span id="cartTotal">R$ 0,00</span>
-    </div>
+        <div class="cart-buttons">
+          <button id="addMore" class="btn-gray">Adicionar mais itens</button>
+          <button id="finalizarCompra" class="btn-pink">Continuar compra</button>
+        </div>
+      </section>
 
-    <div class="cart-buttons">
-      <button id="addMore" class="btn-gray">Adicionar mais itens</button>
-      <button id="finalizarCompra" class="btn-pink">
-        Continuar compra
-      </button>
-    </div>
-  </section>
-
-  <!-- Resumo da Compra -->
-  <section id="resumoSection" class="hidden">
-    <div class="resumo-container">
-      <h2>Resumo da sua compra</h2>
-      <div class="resumo-grid">
-        <div class="resumo-box">
-          <div class="linha">
-            <span>Valor Total dos Presentes</span>
-            <span id="subtotalDisplay">R$ 0,00</span>
+      <!-- Resumo da Compra -->
+      <section id="resumoSection" class="hidden resumo-section">
+        <div class="cabecalho-presentes">
+          <img src="imgs/folha.png" alt="Folha decorativa" class="folha-roxa" />
+          <h2 class="sdn-titulo-pagina">Resumo da sua compra</h2>
+        </div>
+        
+        <div class="resumo-container">
+          <div class="resumo-grid">
+            <div class="resumo-box">
+              <div class="linha">
+                <span>Valor Total dos Presentes</span>
+                <span id="subtotalDisplay">R$ 0,00</span>
+              </div>
+              <div class="linha desconto">
+                <span>Desconto Progressivo</span>
+                <span id="descontoDisplay">- R$ 0,00</span>
+              </div>
+              <div class="linha total">
+                <span>Total</span>
+                <span id="totalFinalDisplay">R$ 0,00</span>
+              </div>
+            </div>
           </div>
-          <div class="linha desconto">
-            <span>Desconto Progressivo</span>
-            <span id="descontoDisplay">- R$ 0,00</span>
-          </div>
-          <div class="linha total">
-            <span>Total</span>
-            <span id="totalFinalDisplay">R$ 0,00</span>
+
+          <div class="botoes-resumo">
+            <button id="voltarCarrinho" class="btn-gray">
+              Voltar para o carrinho
+            </button>
+            <a href="telapagamento.html" id="irParaPagamento" class="btn-pink">
+              Concluir compra
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="botoes-resumo">
-        <button id="voltarCarrinho" class="btn-gray">
-          Voltar para o carrinho
-        </button>
-        <a href="telapagamento.html" id="irParaPagamento" class="btn-pink">
-          Concluir compra
-        </a>
-      </div>
-    </div>
-  </section>
-</section>
+      </section>
+    </section>
 
         <!--==================================PROBLEMA TERMINA AQUI==========================================================-->
 

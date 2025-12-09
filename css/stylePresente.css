@@ -1,9 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* Seção de presentes - Container principal */
-#presentes {
+resumo#presentes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +13,50 @@
   color: #2b2b2b;
   text-align: center;
   padding: 60px 20px;
+  position: relative;
+}
+
+/* Container de listagem de presentes */
+#presentes .presentes-listagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* CABEÇALHO COM FOLHINHA E TÍTULO - SEMPRE CENTRALIZADO */
+#presentes .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Folhinha roxa - SEMPRE centralizada e acima do título */
+#presentes .folha-roxa {
+  width: 80px !important;
+  height: auto !important;
+  margin: 0 auto 20px auto !important;
+  opacity: 0.7 !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* Títulos usando a classe do site */
+#presentes .sdn-titulo-pagina {
+  font-family: 'Hurricane', cursive !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  padding-top: 0 !important;
+  width: 100% !important;
+  display: block !important;
 }
 
 /* Container interno para centralizar conteúdo */
@@ -26,28 +69,6 @@
   margin: 20px auto;
   max-width: 1200px;
   width: 100%;
-}
-
-/* Cabeçalho */
-#presentes .cabeçalho {
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-}
-
-#presentes .icon {
-  width: 80px;
-  margin: 0 auto 20px;
-  opacity: 0.7;
-  display: block;
-}
-
-#presentes .title {
-  font-family: 'Hurricane', cursive;
-  font-size: 2.6em;
-  color: #333;
-  letter-spacing: 2px;
-  margin: 20px 0;
 }
 
 /* Barra superior */
@@ -64,7 +85,7 @@
 }
 
 /* Botão do carrinho */
-#presentes .cart {
+#carrinho .cart {
   background-color: #a794d6;
   border: none;
   border-radius: 50px;
@@ -75,7 +96,7 @@
   transition: background-color 0.3s;
 }
 
-#presentes .cart:hover {
+#carrinho .cart:hover {
   background-color: #aa5edc;
 }
 
@@ -85,7 +106,6 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 #presentes select {
@@ -114,7 +134,6 @@
   padding: 16px;
   text-align: center;
   transition: transform 0.2s;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 #presentes .card:hover {
@@ -168,8 +187,13 @@
   display: none !important;
 }
 
+/* Quando o carrinho está visível, esconder a listagem */
+#presentes .presentes-listagem.hidden {
+  display: none !important;
+}
+
 /* Carrinho - Container centralizado */
-#presentes .cart-section {
+#carrinho .cart-section {
   max-width: 600px;
   width: 90%;
   margin: 40px auto;
@@ -177,24 +201,34 @@
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#presentes .cart-section h2 {
-  font-family: 'Hurricane', cursive;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
+/* Cabeçalho do carrinho */
+.cart-section .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-#presentes .cart-table {
+/* Garantir que o carrinho fique centralizado na página */
+#carrinho .cart-section:not(.hidden) {
+  display: flex;
+}
+
+#carrinho .cart-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  text-align: left;
 }
 
-#presentes .cart-table th {
+#carrinho .cart-table th {
   text-align: left;
   border-bottom: 1px solid #ddd;
   padding: 10px 5px;
@@ -202,19 +236,19 @@
   font-size: 14px;
 }
 
-#presentes .cart-table td {
+#carrinho .cart-table td {
   padding: 15px 5px;
   border-bottom: 1px solid #f0f0f0;
 }
 
-#presentes .cart-item {
+#carrinho .cart-item {
   display: flex;
   align-items: center;
   gap: 15px;
   margin: 10px 0;
 }
 
-#presentes .cart-item img {
+#carrinho .cart-item img {
   width: 80px;
   height: 80px;
   border-radius: 8px;
@@ -222,18 +256,18 @@
   flex-shrink: 0;
 }
 
-#presentes .cart-item > div {
+#carrinho .cart-item > div {
   flex: 1;
 }
 
-#presentes .cart-item-title {
+#carrinho .cart-item-title {
   font-weight: 600;
   font-size: 15px;
   margin-bottom: 5px;
   color: #333;
 }
 
-#presentes .remove {
+#carrinho .remove {
   color: #c067ccb9;
   text-decoration: underline;
   cursor: pointer;
@@ -242,11 +276,11 @@
   margin-top: 5px;
 }
 
-#presentes .remove:hover {
+#carrinho .remove:hover {
   color: #a794d6;
 }
 
-#presentes .cart-total {
+#carrinho .cart-total {
   text-align: right;
   margin-top: 20px;
   font-size: 1.3em;
@@ -255,15 +289,15 @@
   color: #333;
 }
 
-#presentes .cart-buttons {
+#carrinho .cart-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 25px;
 }
 
-#presentes .btn-gray,
-#presentes .btn-pink {
+#carrinho .btn-gray,
+#carrinho .btn-pink {
   border: none;
   border-radius: 50px;
   padding: 14px 20px;
@@ -274,27 +308,28 @@
   text-align: center;
 }
 
-#presentes .btn-gray {
+#carrinho .btn-gray {
   background: #6c757d;
   color: #fff;
 }
 
-#presentes .btn-gray:hover {
+#carrinho .btn-gray:hover {
   background: #5a6268;
 }
 
-#presentes .btn-pink {
+#carrinho .btn-pink {
   background: #a794d6;
   color: #fff;
 }
 
-#presentes .btn-pink:hover {
+#carrinho .btn-pink:hover {
   background: #aa5edc;
 }
 
 /* ========== RESUMO DA COMPRA ========== */
 
-#presentes #resumoSection {
+#resumo #resumoSection,
+#resumo .resumo-section {
   max-width: 600px;
   width: 90%;
   margin: 40px auto;
@@ -302,18 +337,33 @@
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho do resumo */
+#resumo #resumoSection .cabecalho-presentes,
+#resumo .resumo-section .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#resumo #resumoSection:not(.hidden),
+#resumo .resumo-section:not(.hidden) {
+  display: flex;
+}
+
+#resumo .resumo-container {
+  width: 100%;
   text-align: left;
 }
 
-#presentes #resumoSection h2 {
-  font-family: 'Hurricane', cursive;
-  font-size: 2.2em;
-  margin-bottom: 25px;
-  color: #333;
-  text-align: center;
-}
-
-#presentes .resumo-box {
+#resumo .resumo-box {
   border: 1px solid #ead3e8;
   border-radius: 8px;
   padding: 20px;
@@ -321,7 +371,7 @@
   background-color: #fafafa;
 }
 
-#presentes .linha {
+#resumo .linha {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -329,20 +379,20 @@
   font-size: 1em;
 }
 
-#presentes .linha span:first-child {
+#resumo .linha span:first-child {
   color: #666;
 }
 
-#presentes .linha span:last-child {
+#resumo .linha span:last-child {
   font-weight: bold;
   color: #2b2b2b;
 }
 
-#presentes .linha.desconto span:last-child {
+#resumo .linha.desconto span:last-child {
   color: #28a745;
 }
 
-#presentes .linha.total {
+#resumo .linha.total {
   border-top: 2px solid #a794d6;
   margin-top: 10px;
   padding-top: 15px;
@@ -350,19 +400,19 @@
   font-weight: bold;
 }
 
-#presentes .linha.total span {
+#resumo .linha.total span {
   color: #a794d6;
 }
 
-#presentes .botoes-resumo {
+#resumo .botoes-resumo {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 25px;
 }
 
-#presentes .botoes-resumo button,
-#presentes .botoes-resumo a {
+#resumo .botoes-resumo button,
+#resumo .botoes-resumo a {
   width: 100%;
   padding: 14px 20px;
   font-size: 15px;
@@ -377,21 +427,21 @@
   box-sizing: border-box;
 }
 
-#presentes #voltarCarrinho {
+#resumo #voltarCarrinho {
   background: #6c757d;
   color: #fff;
 }
 
-#presentes #voltarCarrinho:hover {
+#resumo #voltarCarrinho:hover {
   background: #5a6268;
 }
 
-#presentes #irParaPagamento {
+#resumo #irParaPagamento {
   background: #a794d6;
   color: #fff;
 }
 
-#presentes #irParaPagamento:hover {
+#resumo #irParaPagamento:hover {
   background: #aa5edc;
 }
 

@@ -22,7 +22,7 @@
   </script>
 </head>
 
-<body class="corpo_site" id="carrinho">
+<body class="corpo_site" id="resumo">
   <!-- ===== MENU SUPERIOR ===== -->
 
   <header class="header">
@@ -36,26 +36,30 @@
     </nav>
   </header>
 
-  <!-- Carrinho -->
-  <section id="cartSection" class="cart-section hidden">
-    <h2>Meu carrinho</h2>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Descrição do presente</th>
-          <th>Valor</th>
-        </tr>
-      </thead>
-      <tbody id="cartItems"></tbody>
-    </table>
-    <div class="cart-total">
-      <strong>Total:</strong> <span id="cartTotal">R$ 0,00</span>
-    </div>
+  <!-- Resumo da Compra -->
+  <section id="resumoSection" class="hidden">
+    <div class="resumo-container">
+      <h2>Resumo da sua compra</h2>
+      <div class="resumo-grid">
+        <div class="resumo-box">
+          <div class="linha">
+            <span>Valor Total dos Presentes</span><span id="subtotalDisplay">R$ 0,00</span>
+          </div>
+          <div class="linha desconto">
+            <span>Desconto Progressivo</span><span id="descontoDisplay">- R$ 0,00</span>
+          </div>
+          <div class="linha total">
+            <span>Total</span><span id="totalFinalDisplay">R$ 0,00</span>
+          </div>
+        </div>
+      </div>
 
-    <div class="cart-buttons">
-      <button id="addMore" class="btn-gray">Adicionar mais itens</button>
-      <a href="resumo.html" id="finalizarCompra" class="btn-pink">Continuar compra</a>
+      <div class="botoes-resumo">
+        <a href="carrinho.html" id="voltarCarrinho" class="btn-gray">Voltar para o carrinho</a>
+        <a href="telapagamento.html" id="irParaPagamento" class="btn-pink">Concluir compra</a>
+      </div>
     </div>
+  </section>
   </section>
 
   <!-- ===== SCRIPTS ===== -->

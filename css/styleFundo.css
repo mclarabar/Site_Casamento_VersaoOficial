@@ -656,6 +656,16 @@ button:hover {
     transform: translateY(-10px) rotate(-45deg);
 }
 
+a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado padrão se desejar */
+}
+
+a:hover {
+    color: #f0f0f0; /* Um branco levemente diferente para feedback visual */
+    /*text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
 /* Mobile behaviour */
 @media (max-width: 767px) {
     .hamburger { display: block; }
