@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Seção de presentes - Container principal */
+resumo#presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #2b2b2b;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+/* Container de listagem de presentes */
+#presentes .presentes-listagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* CABEÇALHO COM FOLHINHA E TÍTULO - SEMPRE CENTRALIZADO */
+#presentes .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Folhinha roxa - SEMPRE centralizada e acima do título */
+#presentes .folha-roxa {
+  width: 80px !important;
+  height: auto !important;
+  margin: 0 auto 20px auto !important;
+  opacity: 0.7 !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* Títulos usando a classe do site */
+#presentes .sdn-titulo-pagina {
+  font-family: 'Hurricane', cursive !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  padding-top: 0 !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Container interno para centralizar conteúdo */
+#presentes .container {
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Barra superior */
+#presentes .top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Botão do carrinho */
+#carrinho .cart {
+  background-color: #a794d6;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 26px;
+  font-size: 15px;
+  color: #f9f6f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#carrinho .cart:hover {
+  background-color: #aa5edc;
+}
+
+/* Ordenação */
+#presentes .sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+#presentes select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Container dos cards */
+#presentes .gift-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Cards dos presentes */
+#presentes .card {
+  margin: 0;
+  width: 100%;
+  max-width: 280px;
+  background: #fffeff;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+#presentes .card:hover {
+  transform: translateY(-3px);
+}
+
+#presentes .gift-image {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+
+#presentes .gift-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #495057;
+  margin: 10px 0 5px;
+  min-height: 40px;
+}
+
+#presentes .gift-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2b2b2b;
+  margin: 6px 0 12px;
+}
+
+#presentes .gift-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  background-color: #a794d6;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#presentes .gift-button:hover {
+  background-color: #aa5edc;
+}
+
+/* ========== CORREÇÃO DA SEÇÃO DO CARRINHO ========== */
+
+/* Esconder elementos */
+#presentes .hidden {
+  display: none !important;
+}
+
+/* Quando o carrinho está visível, esconder a listagem */
+#presentes .presentes-listagem.hidden {
+  display: none !important;
+}
+
+/* Carrinho - Container centralizado */
+#carrinho .cart-section {
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho do carrinho */
+.cart-section .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Garantir que o carrinho fique centralizado na página */
+#carrinho .cart-section:not(.hidden) {
+  display: flex;
+}
+
+#carrinho .cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#carrinho .cart-table th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5px;
+  color: #444;
+  font-size: 14px;
+}
+
+#carrinho .cart-table td {
+  padding: 15px 5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#carrinho .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+#carrinho .cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#carrinho .cart-item > div {
+  flex: 1;
+}
+
+#carrinho .cart-item-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#carrinho .remove {
+  color: #c067ccb9;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#carrinho .remove:hover {
+  color: #a794d6;
+}
+
+#carrinho .cart-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 1.3em;
+  padding-top: 15px;
+  border-top: 2px solid #a794d6;
+  color: #333;
+}
+
+#carrinho .cart-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+#carrinho .btn-gray,
+#carrinho .btn-pink {
+  border: none;
+  border-radius: 50px;
+  padding: 14px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+#carrinho .btn-gray {
+  background: #6c757d;
+  color: #fff;
+}
+
+#carrinho .btn-gray:hover {
+  background: #5a6268;
+}
+
+#carrinho .btn-pink {
+  background: #a794d6;
+  color: #fff;
+}
+
+#carrinho .btn-pink:hover {
+  background: #aa5edc;
+}
+
+/* ========== RESUMO DA COMPRA ========== */
+
+#resumo #resumoSection,
+#resumo .resumo-section {
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho do resumo */
+#resumo #resumoSection .cabecalho-presentes,
+#resumo .resumo-section .cabecalho-presentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#resumo #resumoSection:not(.hidden),
+#resumo .resumo-section:not(.hidden) {
+  display: flex;
+}
+
+#resumo .resumo-container {
+  width: 100%;
+  text-align: left;
+}
+
+#resumo .resumo-box {
+  border: 1px solid #ead3e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #fafafa;
+}
+
+#resumo .linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 1em;
+}
+
+#resumo .linha span:first-child {
+  color: #666;
+}
+
+#resumo .linha span:last-child {
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+#resumo .linha.desconto span:last-child {
+  color: #28a745;
+}
+
+#resumo .linha.total {
+  border-top: 2px solid #a794d6;
+  margin-top: 10px;
+  padding-top: 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#resumo .linha.total span {
+  color: #a794d6;
+}
+
+#resumo .botoes-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+#resumo .botoes-resumo button,
+#resumo .botoes-resumo a {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  box-sizing: border-box;
+}
+
+#resumo #voltarCarrinho {
+  background: #6c757d;
+  color: #fff;
+}
+
+#resumo #voltarCarrinho:hover {
+  background: #5a6268;
+}
+
+#resumo #irParaPagamento {
+  background: #a794d6;
+  color: #fff;
+}
+
+#resumo #irParaPagamento:hover {
+  background: #aa5edc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #presentes .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #presentes .cart-section,
+  #presentes #resumoSection {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  #presentes .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  #presentes .cart-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  #presentes .title {
+    font-size: 2em;
+  }
+  
+  #presentes .card {
+    max-width: 100%;
+  }
+  
+  #presentes .cart-section h2,
+  #presentes #resumoSection h2 {
+    font-size: 1.6em;
+  }
+}

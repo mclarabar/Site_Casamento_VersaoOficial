@@ -1,0 +1,143 @@
+.fundo_presenca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6fa;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.fundo_presenca h1 {
+  color: #070011;
+  margin-bottom: 30px;
+}
+
+.confirmar_presenca {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  /* max-width: 450px; */
+  text-align: left;
+  /* MUDANÇA: Altere a fonte do formulário de "Poppins" para "Lato" */
+  font-family: "Lato", sans-serif;
+}
+
+.confirmar_presenca form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.confirmar_presenca label {
+  font-size: 14px;
+  color: #4b2a84;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.confirmar_presenca input[type="text"],
+.confirmar_presenca input[type="email"],
+.confirmar_presenca input[type="tel"],
+.confirmar_presenca textarea,
+.confirmar_presenca select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f8f9fc;
+}
+
+.confirmar_presenca input[type="text"]:focus,
+.confirmar_presenca input[type="email"]:focus,
+.confirmar_presenca input[type="tel"]:focus,
+.confirmar_presenca select:focus,
+.confirmar_presenca textarea:focus {
+  border-color: #b086f7;
+  outline: none;
+  box-shadow: 0 0 4px rgba(176, 134, 247, 0.5);
+}
+
+
+
+
+fieldset {
+  border: none;
+  margin-top: 10px;
+}
+
+legend {
+  color: #4b2a84;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input[type="radio"] {
+  accent-color: #7d4ede;
+  margin-right: 5px;
+}
+
+
+
+
+input[type="checkbox"] {
+  accent-color: #7d4ede;
+  margin-right: 8px;
+}
+
+.confirmar_presenca label[for="newsletter"],
+.confirmar_presenca label[for="info"] {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+
+
+#confirmar_presenca {
+  background-color: #7d4ede;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#confirmar_presenca:hover {
+  background-color: #5f33b5;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .confirmar_presenca {
+    width: 90%;
+    padding: 25px;
+  }
+
+  #confirmar_presenca {
+    font-size: 14px;
+  }
+}
+
+
+
+.mensagem{
+  display: flex;
+  align-items: center;
+margin-top: 15px;
+font-family: "Poppins", sans-serif;
+  color: #4b2a84;
+}
