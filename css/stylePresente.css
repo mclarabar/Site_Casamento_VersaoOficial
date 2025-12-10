@@ -85,7 +85,7 @@ resumo#presentes {
 }
 
 /* Botão do carrinho */
-#carrinho .cart {
+#presentes .cart {
   background-color: #a794d6;
   border: none;
   border-radius: 50px;
@@ -94,9 +94,10 @@ resumo#presentes {
   color: #f9f6f9;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#carrinho .cart:hover {
+#presentes .cart:hover {
   background-color: #aa5edc;
 }
 
